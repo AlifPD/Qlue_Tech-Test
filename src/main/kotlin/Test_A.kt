@@ -3,19 +3,19 @@ fun main(){
     sortData(data)
 }
 
-fun sortData(input: Array<Int>){
-    val ranges = 0 until input.size-2
+fun sortData(data: Array<Int>){
+    val ranges = 0 until data.size-2
     var temp: Int
 
     for(i in ranges){
         for(j in ranges){
-            if (input[j] > input[j + 1]) {
-                temp = input[j]
-                input[j] = input[j + 1]
-                input[j + 1] = temp
+            if (data[j] > data[j + 1]) {
+                temp = data[j]
+                data[j] = data[j + 1]
+                data[j + 1] = temp
             }
         }
     }
 
-    println(input.joinToString(","))
+    println(data.joinToString(","))
 }
